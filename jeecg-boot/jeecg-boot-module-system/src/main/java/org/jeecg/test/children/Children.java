@@ -10,24 +10,18 @@ public class Children extends Parent {
 
     public static void main(String[] args) {
 
-        String a = new String("x");
+        String str1 = "Hello World!!!";
+        String str2 = new String("Hello World!!!");
+        String str3 = new String("Hello World!!!");
+        str3.intern();
+        String str4 = new String("Hello World!!!").intern();
 
-        String b = "x";
-
-        System.out.println(a == b);
-
-        a.intern();
-
-        System.out.println(a == b);
-
-        String c = new String("x").intern();
-
-        String d = "x";
-
-        System.out.println(c == a);
-
-        System.out.println(c == d);
-
+        System.out.println(str1 == str2); // false
+        System.out.println(str1 == str3); // false
+        System.out.println(str1 == str4); // true
+        System.out.println(str2 == str3); // false
+        System.out.println(str2 == str4); // false
+        System.out.println(str3 == str4); // false
 
         // log.debug("语句");
 
