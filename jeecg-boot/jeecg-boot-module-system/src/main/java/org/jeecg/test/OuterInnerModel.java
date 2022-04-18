@@ -62,6 +62,7 @@ class Outer {
     static class Inner4{
         public static void show(){
             System.out.println("123");
+            System.out.println(123);
         }
     }
 
